@@ -27,7 +27,16 @@ class EmployeeRequest extends FormRequest
             'first_name' => 'required',
             'last_name' => 'required',
             'phone' => 'min:10|max:10',
-            'email' => 'email:rfc,dns|unique:App\Employee,email'
+            'email' => 'email:rfc,dns|unique:App\Employee,email',
+            'company_id' => 'required|numeric'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'company_id.required' => 'The company must be a selected',
+            'company_id.numeric' => 'The company must be a selected'
         ];
     }
 }

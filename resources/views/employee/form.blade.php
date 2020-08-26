@@ -17,7 +17,7 @@
             @if(empty($employee) && old('company_id')==$company['id']) selected @endif
             value="{{$company['id']}}">{{$company['name']}}</option>
         @empty
-            <option>Select Comapny</option>
+            <option value="">Select Comapny</option>
         @endforelse   
         
     </select>

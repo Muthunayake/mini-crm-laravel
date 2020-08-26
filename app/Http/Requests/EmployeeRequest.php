@@ -35,8 +35,8 @@ class EmployeeRequest extends FormRequest
     public function messages()
     {
         return [
-            'company_id.required' => 'The company must be a selected',
-            'company_id.numeric' => 'The company must be a selected'
+            'company_id.required' => 'The company must be selected',
+            'company_id.numeric' => 'The company must be selected'
         ];
     }
 }

@@ -25,7 +25,7 @@ class CompanyRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'email' => 'email:rfc,dns|unique:App\Company,email'
+            'email' => 'email|unique:App\Company,email'
         ];
     }
 }
